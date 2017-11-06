@@ -4,3 +4,5 @@
 *.conf
 *.cnf
 *.config
+nohup.out
+1
