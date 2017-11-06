@@ -1,0 +1,6 @@
+*.py[cod]
+*$py.class
+*.json
+*.conf
+*.cnf
+*.config

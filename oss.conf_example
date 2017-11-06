@@ -1,0 +1,5 @@
+---
+access_key_secret: "xxxxxxxxxxxxxxxxxxxxxxxxx"
+access_key_id: "xxxxxxx"
+bucket_name: "xxxxx"
+endpoint: "http://oss-cn-beijing.aliyuncs.com"
