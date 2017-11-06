@@ -12,7 +12,7 @@ mv oss.conf_example oss.conf
 # 修改上传数据文件
 mv public_config.json_example public_config.json
 
-# 让push功能安时间间隔自动执行
+# 让push功能定时自动执行
 nohup bash daemon.sh &
 ```
 
