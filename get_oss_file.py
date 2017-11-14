@@ -15,8 +15,6 @@ ossb = OssBao(
         endpoint=oss_conf['endpoint'],
         )
 
-
 public_f = 'public_config.json'
 
 ossb.oss_get(public_f, 'my.json')
-
