@@ -4,6 +4,8 @@
 import yaml
 import os
 from osslib.ossbao import OssBao
+import datetime
+
 
 with open("oss.conf") as ossf:
     oss_conf = yaml.load(ossf)
@@ -18,8 +20,11 @@ ossb = OssBao(
 
 public_f = 'public_config.json'
 
+now = datetime.datetime.now()
+logtime=now.strftime('%Y-%m-%d %H:%M:%S')
+
 if not os.path.exists(public_f):
-    print 'oss_get ...'
+    print '%s oss_get ...' % logtime
     ossb.oss_get(public_f, public_f)
 
 new_ip = ossb.get_public_ip()
@@ -27,5 +32,5 @@ new_ip = ossb.get_public_ip()
 if ossb.check_update(new_ip, public_f):
     ossb.oss_push(public_f, public_f)
 else:
-    print 'No update!'
+    print '%s No update!' % logtime
 

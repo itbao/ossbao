@@ -35,7 +35,7 @@ class OssBao():
             data = OssBao.read_json_file(public_f)
             if data['peIp'] != new_ip:
                 data['peIp'] = new_ip
-                BaoOss.write_json_file(public_f, data)
+                OssBao.write_json_file(public_f, data)
                 return True
             else:
                 return False
